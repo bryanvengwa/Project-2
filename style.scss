@@ -1,0 +1,199 @@
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+       padding: 0; margin: 0; font-family: Arial, Helvetica, sans-serif;
+}
+body{
+	overflow-x: hidden;
+}
+
+$color: rgb( 188,0,77 );
+$font: " Arial, Helvetica, sans-serif "  ;
+@mixin headings {
+	h1{ font-family: "apple";  color: $color; font-size: 2.4rem; }
+			h1::first-line{color: rgb(86, 83, 83); font-family:$font ; font-size: 1.2rem; }
+}
+
+header{ background-image:  url(img/banner.jpg) ;  background-position: center; background-size:cover ; background-repeat: no-repeat;height: 100vh; position: relative; background-attachment: fixed; 
+       .gradient{background-image: linear-gradient( rgb(0, 0, 0, 70%), rgb(0, 0, 0, 70%)); width: 100%; height: 100vh; position: absolute; z-index: 1;}  
+       .text-container{ position: absolute;display: flex; align-items: center; justify-content: center; flex-direction: column; z-index: 4; color: white; width: 100%; height: 100%; 
+		h2{  font-size: 1.3rem; color: $color; margin-bottom: -0.2em; }
+              h1{ font-size: 6vh; font-family: impact;  margin: 0;  }
+		h3{ font-size: 0.99rem; font-weight: 100; }
+              button{background: transparent; font-size: 0.8rem; padding: 1em 2em; border: 4px solid $color; color: white; }
+	  }
+	.social-links{ position: absolute; z-index: 5;  width: 100%;  top: 90vh;
+		ul{  display: flex; width: 100%; align-items: center; justify-content: center;
+			li{ padding: 0.26em;  a{  color: white; font-size: 2.2rem; }			
+		} li{ a:hover{ color: $color; } }
+	}     }  
+}
+
+.about{  .image-container{position: relative; margin-top: 2rem;
+	
+	.ring{position: absolute; border: 10px solid $color; width:20rem ; height: 28rem; top: 40px; left: 50px; z-index: -1; background-image: url(img/Screenshot\ 2023-02-13\ at\ 13.36.40.png); background-repeat: no-repeat; background-size: cover;
+		}
+}
+.about-info{  @include headings;
+
+}
+p{ font-size: 1.4rem; }
+.but{  button{ padding: 1em 2em; font-size: 1.1rem; background: $color; color: white;  border: 3px solid $color; }
+.white{ background: white; color: black; }
+
+ }
+}
+
+
+.portfolio{ .headings{ @include headings; text-align: center;  }
+	 .card{box-shadow: 1px 2px 15px 2px rgba(111, 111, 111, 0.504);
+	img{ width: 100%; height: 21rem; object-fit: cover ; border-bottom:0.2px solid rgb(218, 206, 206) ; }
+	img:hover{ transform:scale(1.01);   transition:0,5s ease-in-out; }
+	.card-text{ display: flex; justify-content: space-between; 
+	i{ font-size: 2.3rem;}
+	}
+
+}
+//MODAL CODE
+.modal-body{  height: 50rem; width: 50rem; }
+
+
+}
+.impressed{ height: 40vh; background-image: url(img/impressed.jpg); background-size: cover; background-attachment: fixed;
+	.gradient{ background-image: linear-gradient( rgba(0, 0, 255, 0.667), rgba(0, 0, 255, 0.755)); width: 100%; height: 40vh; 
+	display: flex; align-items: center; justify-content: center; flex-direction: column; 
+	.content{  color: white; text-align: center; span{ font-family:"apple"; color: $color; font-size: 2.7rem; }
+	button{ color: white; padding: 0.7em 1.8em; font-size: 1.1rem; background: $color; border: none; } 
+	}
+	}
+}
+
+.contact{  .container{ padding: 3em; box-shadow: 1px 2px 15px 2px rgba(111, 111, 111, 0.504);  }
+	 form{  display: flex; flex-direction: column; justify-content: center; 
+	.w50{ width: 100%;}
+	.flex-container{ display: flex;}
+	.send{ width: 40%; background: $color; color: white; border: none; padding: 0.7em 1.8em; border-radius:10px; outline: 1px solid $color; border: 3px solid white; }
+}
+.putin{ display: flex; flex-direction: column; }
+.headings{ @include headings; text-align: center; }
+ul{ text-align: center;  }
+.social-links{ display: flex; align-items: center; justify-content: center; 
+	li { padding: 5px; i{ color: black;  font-size: 1.5rem; border: 1px solid $color; border-radius: 50%; padding: 0.6em; }
+	i:hover{ background: black; color: white; border: 3px solid white ; outline: 3px solid black; }
+}
+
+} 
+
+}
+footer{ height: 2vh; text-align: center;span{font-weight: 700;}  }
+
+
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 568px) {  
+
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+	header{  .text-container{  h2{  font-size: 2rem; font-weight:800 ; } h1{ font-size: 7vh; } h3{ font-size: 1.7rem; font-weight: 200; } button{font-size: 1.3rem;  margin-top: 1em; } }
+	.social-links{ ul{  li{ padding: 0.3em;  a{  padding: 1.5; color: white; font-size: 3rem; }} }    }  }
+
+	
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	header{  .text-container{  h2{  font-size: 2rem; font-weight:800 ; } h1{ font-size: 10vh; } h3{ font-size: 1.6rem; font-weight: 200; }button{ font-size: 1.3rem; padding: 0.7em 1em;  }}
+	.social-links{ ul{  li{ padding: 0.3em;  a{  padding: 1.5; color: white; font-size: 3rem; }} }    }  }
+	.about{  .image-container{ display: flex;align-items: center; justify-content: center;
+		.ring{ top: 60px; left: unset; right: 93px;
+		}
+	
+		
+	}}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+
+    
+}
+
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) { 
+
+}
