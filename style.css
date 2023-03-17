@@ -182,6 +182,67 @@ header .social-links ul li a:hover {
   border: 2px solid rgb(188, 0, 77);
 }
 
+.services .headings {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.services .headings h1 {
+  font-family: "apple";
+  color: rgb(188, 0, 77);
+  font-size: 2.4rem;
+}
+.services .headings h1::first-line {
+  color: rgb(86, 83, 83);
+  font-family: " Arial, Helvetica, sans-serif ";
+  font-size: 1.2rem;
+}
+.services .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.services .card {
+  align-items: center;
+  padding: 10px;
+  border: none;
+  box-shadow: 1px 2px 15px 2px rgba(111, 111, 111, 0.366);
+}
+.services .card .hovering {
+  color: aliceblue;
+  box-shadow: 1px 2px 15px 2px rgba(230, 229, 229, 0.621);
+  border-radius: 50%;
+  height: 20vh;
+  width: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services .card .hovering i {
+  font-size: 3.5rem;
+  color: rgb(188, 0, 77);
+}
+.services .card .card-body {
+  text-align: center;
+}
+.services .card .card-body h2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: rgba(33, 31, 31, 0.899);
+}
+.services .card .card-body p {
+  font-weight: 400;
+  display: none;
+}
+.services .card:hover .hovering {
+  border-color: lightblue;
+  background: rgb(188, 0, 77);
+  transition: 2s all ease-in-out;
+}
+.services .card:hover .hovering i {
+  color: white;
+}
+
 .portfolio .headings {
   text-align: center;
 }
@@ -368,6 +429,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     color: white;
     font-size: 3rem;
   }
+  .services {
+    display: unset;
+  }
 }
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -404,8 +468,17 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     left: unset;
     right: 93px;
   }
+  .services .card {
+    min-width: 22rem;
+  }
 }
 /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .services .card {
+    min-width: 26rem;
+    max-width: 100%;
+  }
+}
 /*
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 Custom media queries
